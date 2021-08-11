@@ -14,3 +14,12 @@
   键：{{key}}
   值：{{value}}
 </block>
+<!-- 如果一个标签频繁的隐藏和显示建议使用 标签样式 hidden="true/false", hidden 是通过添加样式的方式来切换隐藏和显示，
+    如果一个标签不是太频繁的隐藏和显示就使用wx:if 条件判断，wx:if 是把一个标签删除再添加，添加再删除
+    注意：两者对比：hidden 样式的方式对性能比较好 
+    注意：hidden 和 display 有冲突，不可以一起使用 -->
+<view wx:if="{{3>2}}">显示</view>
+<view wx:else>隐藏</view>
+<view hidden="{{true}}">显示</view>
+<view hidden="{{false}}">隐藏</view>
+<view hidden style="display:flex">显示还是隐藏</view>
