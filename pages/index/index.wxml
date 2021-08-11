@@ -5,5 +5,12 @@
   <view>{{item.sex}}</view>
 </view>
 <!-- 列表循环对象 -->
-<view wx:for="{{arrayObj[0]}}" wx:for-index="value" wx:for-item="key">键：{{key}}
-  值：{{value}}</view>
+<view wx:for="{{arrayObj[0]}}" wx:for-index="value" wx:for-item="key">
+  键：{{key}}
+  值：{{value}}
+</view>
+<!-- block 占位符标签，代码中显示，页面效果中不显示 -->
+<block wx:for="{{arrayObj[0]}}" wx:for-item="key" wx:for-index="value">
+  键：{{key}}
+  值：{{value}}
+</block>
