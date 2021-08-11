@@ -31,3 +31,4 @@
 <button bindtap="handleButton" data-zidingyishuxing="{{1}}">+</button>
 <button bindtap="handleButton" data-zidingyishuxing="{{-1}}">-</button>
 <view>{{number}}</view>
+<view class="test">rpx适配</view>
