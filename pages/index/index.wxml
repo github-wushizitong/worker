@@ -23,3 +23,6 @@
 <view hidden="{{true}}">显示</view>
 <view hidden="{{false}}">隐藏</view>
 <view hidden style="display:flex">显示还是隐藏</view>
+<!-- 事件绑定 -->
+请输入<input type="text" bindinput="handleInput" />
+<view>{{num}}</view>
