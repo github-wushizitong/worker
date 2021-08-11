@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index", 
+    "pages/zhaopin/zhaopin"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "城市缔造者",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "",
+    "selectedColor": "",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/tabbarImg/shiGong_00.png",
+        "selectedIconPath": "./static/tabbarImg/shiGong_01.png"
+      },
+      {
+        "pagePath": "pages/zhaopin/zhaopin",
+        "text": "找工作",
+        "iconPath": "./static/tabbarImg/zhaoPin_00.png",
+        "selectedIconPath": "./static/tabbarImg/zhaoPin_01.png"
+      }
+    ]
+  }
+}

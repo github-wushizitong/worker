@@ -1,0 +1,9 @@
+<!-- 列表循环数组 -->
+<view wx:for="{{arrayObj}}" wx:for-item="item" wx:for-index="index">
+  <view>{{item.name}}</view>
+  <view>{{item.age}}</view>
+  <view>{{item.sex}}</view>
+</view>
+<!-- 列表循环对象 -->
+<view wx:for="{{arrayObj[0]}}" wx:for-index="value" wx:for-item="key">键：{{key}}
+  值：{{value}}</view>
