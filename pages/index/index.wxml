@@ -1,3 +1,18 @@
+<!-- swiper组件使用 -->
+<swiper class="swiperCls" indicator-dots>
+  <swiper-item>
+    <image mode="widthFix" src="../../img/01.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../img/02.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../img/03.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../img/04.jpg" />
+  </swiper-item>
+</swiper>
 <!-- 列表循环数组 -->
 <view wx:for="{{arrayObj}}" wx:for-item="item" wx:for-index="index">
   <view>{{item.name}}</view>

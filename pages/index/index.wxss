@@ -1,7 +1,12 @@
-/* pages/index/index.wxss */
 .test {
-  width: 200rpx;
-  height: 200rpx;
-  font-size: 40rpx;
-  background-color: green;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: red;
+}
+.swiperCls {
+  width: 100%;
+  height: calc(100vw * 280 / 520);
+}
+.swiperCls image {
+  width: 100%;
 }

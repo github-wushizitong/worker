@@ -1,0 +1,15 @@
+@color: red;
+.test {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: @color;
+}
+.swiperCls {
+  width: 100%;
+  // swiper 的高度 为    swiper 宽度 / swiper 高度 = 原图的宽度 / 原图的高度  ==  swiper 高度 = swiper 宽度 * 原图的高度 / 原图的宽度
+  // 100vw代表手机宽度，100vh代表手机高度
+  height: calc(100vw * 280 / 520);
+  image {
+    width: 100%;
+  }
+}
