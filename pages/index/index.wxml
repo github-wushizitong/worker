@@ -1,49 +1,7 @@
-<!-- swiper组件使用 -->
-<swiper class="swiperCls" indicator-dots>
-  <swiper-item>
-    <image mode="widthFix" src="../../img/01.jpg" />
-  </swiper-item>
-  <swiper-item>
-    <image mode="widthFix" src="../../img/02.jpg" />
-  </swiper-item>
-  <swiper-item>
-    <image mode="widthFix" src="../../img/03.jpg" />
-  </swiper-item>
-  <swiper-item>
-    <image mode="widthFix" src="../../img/04.jpg" />
-  </swiper-item>
-</swiper>
-<!-- 列表循环数组 -->
-<view wx:for="{{arrayObj}}" wx:for-item="item" wx:for-index="index">
-  <view>{{item.name}}</view>
-  <view>{{item.age}}</view>
-  <view>{{item.sex}}</view>
-</view>
-<!-- 列表循环对象 -->
-<view wx:for="{{arrayObj[0]}}" wx:for-index="value" wx:for-item="key">
-  键：{{key}}
-  值：{{value}}
-</view>
-<!-- block 占位符标签，代码中显示，页面效果中不显示 -->
-<block wx:for="{{arrayObj[0]}}" wx:for-item="key" wx:for-index="value">
-  键：{{key}}
-  值：{{value}}
-</block>
-<!-- 如果一个标签频繁的隐藏和显示建议使用 标签样式 hidden="true/false", hidden 是通过添加样式的方式来切换隐藏和显示，
-    如果一个标签不是太频繁的隐藏和显示就使用wx:if 条件判断，wx:if 是把一个标签删除再添加，添加再删除
-    注意：两者对比：hidden 样式的方式对性能比较好 
-    注意：hidden 和 display 有冲突，不可以一起使用 -->
-<view wx:if="{{3>2}}">显示</view>
-<view wx:else>隐藏</view>
-<view hidden="{{true}}">显示</view>
-<view hidden="{{false}}">隐藏</view>
-<view hidden style="display:flex">显示还是隐藏</view>
-<!-- 事件绑定 -->
-请输入
-<input type="text" bindinput="handleInput" />
-<view>{{num}}</view>
-<!-- 如果需要事件传参，需要自定义属性，不可以用函数(参数)的方式进行传参 -->
-<button bindtap="handleButton" data-zidingyishuxing="{{1}}">+</button>
-<button bindtap="handleButton" data-zidingyishuxing="{{-1}}">-</button>
-<view>{{number}}</view>
-<view class="test">rpx适配</view>
+<button open-type="contact">contact</button>
+<button open-type="share">share</button>
+<button open-type="getPhoneNumber">getPhoneNumber</button>
+<button open-type="getUserInfo">getUserInfo</button>
+<button open-type="launchApp">launchApp</button>
+<button open-type="feedback">feedback</button>
+<button open-type="openSetting">openSetting</button>
