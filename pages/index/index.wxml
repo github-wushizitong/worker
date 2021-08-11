@@ -1,5 +1,6 @@
-<radio-group bindchange="radioHandle">
-  <radio class="" value="nan" color="">男</radio>
-  <radio class="" value="nv" color="">女</radio>
-</radio-group>
-<view>您选择的为{{sex}}</view>
+<checkbox-group bindchange="checkboxHandle">
+  <checkbox value="{{item.value}}" wx:for="{{list}}" wx:for-item="item" wx:key="id">
+    {{item.name}}
+  </checkbox>
+</checkbox-group>
+<view>您选择的有：{{result}}</view>

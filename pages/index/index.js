@@ -3,12 +3,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    sex: ''
+    list: [
+      {
+        id: 0,
+        name: '河南',
+        value: 'henan'
+      },
+      {
+        id: 1,
+        name: '广东',
+        value: 'guangdong'
+      },
+      {
+        id: 2,
+        name: '河北',
+        value: 'hebei'
+      }
+    ],
+    result: []
   },
-  radioHandle(e) {
+  checkboxHandle(e) {
     console.log(e);
     this.setData({
-      sex: e.detail.value
+      result: e.detail.value
     });
   },
 
