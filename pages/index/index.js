@@ -24,23 +24,29 @@ Page({
         sex: '女'
       }
     ],
-    num:''
+    num: '',
+    number: 0
   },
-    
-  handleInput(e){
+
+  handleInput(e) {
     // 打印事件源对象
     // console.log(e);
     // 更新数据
     this.setData({
-      num:e.detail.value
-    })
+      num: e.detail.value
+    });
   },
-  
+  handleButton(e) {
+    // console.log(e)
+    this.setData({
+      number: this.data.number + e.currentTarget.dataset.zidingyishuxing
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-},
+  onLoad: function (options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -50,8 +56,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏

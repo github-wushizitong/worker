@@ -24,5 +24,10 @@
 <view hidden="{{false}}">隐藏</view>
 <view hidden style="display:flex">显示还是隐藏</view>
 <!-- 事件绑定 -->
-请输入<input type="text" bindinput="handleInput" />
+请输入
+<input type="text" bindinput="handleInput" />
 <view>{{num}}</view>
+<!-- 如果需要事件传参，需要自定义属性，不可以用函数(参数)的方式进行传参 -->
+<button bindtap="handleButton" data-zidingyishuxing="{{1}}">+</button>
+<button bindtap="handleButton" data-zidingyishuxing="{{-1}}">-</button>
+<view>{{number}}</view>
