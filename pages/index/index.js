@@ -2,7 +2,30 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    list: [
+      {
+        id: 0,
+        name: '首页',
+        isActive: true
+      },
+      {
+        id: 1,
+        name: '资讯',
+        isActive: false
+      },
+      {
+        id: 2,
+        name: '新闻',
+        isActive: false
+      },
+      {
+        id: 3,
+        name: '关于',
+        isActive: false
+      }
+    ]
+  },
 
   /**
    * 生命周期函数--监听页面加载

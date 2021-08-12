@@ -3,35 +3,20 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {},
+  properties: {
+    // 接收父组件传递过来的数据
+    list: {
+      // 接收的数据类型
+      type: Array,
+      // 接收的数据的初始值
+      value: []
+    }
+  },
 
   /**
    * 组件的初始数据
    */
-  data: {
-    list: [
-      {
-        id: 0,
-        name: '首页',
-        isActive: true
-      },
-      {
-        id: 1,
-        name: '资讯',
-        isActive: false
-      },
-      {
-        id: 2,
-        name: '新闻',
-        isActive: false
-      },
-      {
-        id: 3,
-        name: '关于',
-        isActive: false
-      }
-    ]
-  },
+  data: {},
 
   /**
    * 组件的方法列表
