@@ -5,8 +5,6 @@
     </view>
   </view>
   <view class="tabs_content">
-    <!-- slot标签 其实就是一个占位符 插槽 -->
-    <!-- 父组件调用该子组件的时候 再传递 wxml标签 过来 最终这些被传递过来的 wxml标签 就会替换 solt插槽的位置 -->
-    <slot></slot>
+    
   </view>
 </view>
