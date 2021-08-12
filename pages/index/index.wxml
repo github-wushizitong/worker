@@ -1,6 +1,1 @@
-<checkbox-group bindchange="checkboxHandle">
-  <checkbox value="{{item.value}}" wx:for="{{list}}" wx:for-item="item" wx:key="id">
-    {{item.name}}
-  </checkbox>
-</checkbox-group>
-<view>您选择的有：{{result}}</view>
+<Tabs></Tabs>
