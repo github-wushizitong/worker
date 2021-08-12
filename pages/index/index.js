@@ -26,6 +26,21 @@ Page({
       }
     ]
   },
+  handleItemClick(e) {
+    console.log(e);
+    // 获取事件源对象中的数据
+    let { index } = e.detail;
+    // 拷贝list 数据
+    let list = JSON.parse(JSON.stringify(this.data.list));
+    list.forEach((listItem, listIndex) => {
+      listIndex === index
+        ? (listItem.isActive = true)
+        : (listItem.isActive = false);
+    });
+    this.setData({
+      list: list
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载

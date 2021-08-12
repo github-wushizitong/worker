@@ -27,21 +27,9 @@ Component({
       console.log(e);
       // 获取事件源 的 data-index 属性
       let { index } = e.currentTarget.dataset;
-      // 最严谨的作风，重新拷贝一份数组，再对这个数组的备份进行处理，
-      // let list = JSON.parse(JSON.stringify(this.data.list));
-      // 获取 当前data 数据
-      let { list } = this.data;
-      // 循环数组，注意，会修改当前数组中的对象,也会导致源数组数据被修改
-      list.forEach((listItem, listIndex) => {
-        if (listIndex === index) {
-          listItem.isActive = true;
-        } else {
-          listItem.isActive = false;
-        }
-      });
-      this.setData({
-        list: list
-      });
+
+      // 当前(子组件)向引用当前组件的父组件传递数据,并且触发父组件中的自定义事件
+      this.triggerEvent('itemClick', { index });
     }
   }
 });

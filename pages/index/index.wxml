@@ -1,3 +1,4 @@
 <!-- 父组件(当前使用组件的页面)向 子组件(自定义组件)传递数据，是通过标签属性的方式传递的 -->
 <!-- 传到子组件的数据由子组件js文件中 properties: {}, 该对象接收 -->
-<Tabs list="{{list}}"></Tabs>
+<!-- 子组件传递过来的自定义事件 为 itemClick ，父组件前面加上 bind -->
+<Tabs list="{{list}}" binditemClick="handleItemClick"></Tabs>
