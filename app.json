@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index", 
-    "pages/zhaopin/zhaopin"      
+    "pages/zhaopin/zhaopin",
+    "pages/my/my"       
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -29,6 +30,12 @@
         "text": "找工作",
         "iconPath": "./static/tabbarImg/zhaoPin_00.png",
         "selectedIconPath": "./static/tabbarImg/zhaoPin_01.png"
+      },
+      {
+        "pagePath":"pages/my/my",
+        "text":"我的",
+        "iconPath":"./static/tabbarImg/my_00.png",
+        "selectedIconPath":"./static/tabbarImg/my_01.png"
       }
     ]
   }
