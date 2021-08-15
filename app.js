@@ -1,5 +1,8 @@
 const {request}=require('./utils/util')
 App({
+  // 全局数据
+  globalData:{
+  },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）,
    * 应用第一次启动的时候就会触发该事件回调
@@ -7,8 +10,6 @@ App({
   onLaunch: function () {
     // 在应用第一次启动的时候，就可以获取用户的个人信息
     console.log('onLanch+用户第一次启动该小程序的回调');
-      
-    
     
     wx.login({
       success:async function(wxUserCodeObj){
