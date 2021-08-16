@@ -1,3 +1,4 @@
+const {request}=require('../../utils/util')
 // pages/my/my.js
 Page({
 
@@ -18,6 +19,22 @@ Page({
       desc:'用于完善用户资料'
     })
     console.log(wxUserInfo);
+    // console.log(wxUserInfo.encryptedData);
+    // console.log(wxUserInfo.iv);
+    wx.login({
+      success:async function(wxUserCodeObj){
+        console.log(wxUserCodeObj.code);
+        if(wxUserCodeObj.errMsg === 'login:ok' && wxUserCodeObj.code){
+          const wxUserCode = wxUserCodeObj.code;
+          const wxUserInfoEncryptedData = wxUserInfo.encryptedData;
+          const wxUserInfoIv = wxUserInfo.iv;
+          // 获取使用openid和session_key解密后的用户信息和小程序端的cookie
+          let result = await request('/admin/login','GET',{wxUserCode,wxUserInfoEncryptedData,wxUserInfoIv});
+          console.log(JSON.parse(result.msg));
+      
+        }
+      }
+    })
   },
 
   /**

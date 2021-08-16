@@ -1,4 +1,4 @@
-const {request}=require('./utils/util')
+
 App({
   // 全局数据
   globalData:{
@@ -11,16 +11,6 @@ App({
     // 在应用第一次启动的时候，就可以获取用户的个人信息
     console.log('onLanch+用户第一次启动该小程序的回调');
     
-    wx.login({
-      success:async function(wxUserCodeObj){
-        console.log(wxUserCodeObj.code);
-        if(wxUserCodeObj.errMsg === 'login:ok' && wxUserCodeObj.code){
-          const wxUserCode = wxUserCodeObj.code;
-          let result = await request('/','GET',{wxUserCode});
-          console.log(result);
-        }
-      }
-    })
   },
 
   /**
